@@ -10,7 +10,7 @@
     <div id="adsairo-popup-content">
       <div id="adsairo-popup-header">
         <span id="adsairo-ad-label">Ad</span>
-        <div title="Ad Info" style="width:22px; height:22px; display:flex; align-items:center; justify-content:center; background:#ffffff; border-radius:4px; box-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+        <div title="Ad Info" id="adsairo-info-icon" style="width:22px; height:22px; display:flex; align-items:center; justify-content:center; background:#ffffff; border-radius:4px; box-shadow: 0 1px 2px rgba(0,0,0,0.2); cursor: pointer;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="12" height="12">
             <path fill="#1a73e8" d="M7.5,1.5a6,6,0,1,0,0,12a6,6,0,1,0,0,-12m0,1a5,5,0,1,1,0,10a5,5,0,1,1,0,-10ZM6.625,11l1.75,0l0,-4.5l-1.75,0ZM7.5,3.75a1,1,0,1,0,0,2a1,1,0,1,0,0,-2Z"/>
           </svg>
@@ -134,6 +134,11 @@
     setTimeout(showPopup, 40000); // Reopen after 40 seconds
   };
   document.getElementById('adsairo-open-button').onclick = function() {
+    window.open('https://www.adsairo.com/', '_blank');
+  };
+
+  // Info icon click event to open the link
+  document.getElementById('adsairo-info-icon').onclick = function() {
     window.open('https://www.adsairo.com/', '_blank');
   };
 
